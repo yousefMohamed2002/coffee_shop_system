@@ -238,7 +238,7 @@ public class EmployeeLogin extends javax.swing.JFrame {
        rs=st.executeQuery();
        if (rs.next())
        {
-           EmployeeHome f1=new EmployeeHome(); 
+           EmployeeHome f1=new EmployeeHome();
            f1.setVisible(true);
            f1.pack();
            f1.setLocationRelativeTo(null);
