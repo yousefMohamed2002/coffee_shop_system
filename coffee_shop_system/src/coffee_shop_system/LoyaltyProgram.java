@@ -87,6 +87,11 @@ public class LoyaltyProgram extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Remove");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("NumperOfPoints");
@@ -190,6 +195,33 @@ public class LoyaltyProgram extends javax.swing.JFrame {
             Logger.getLogger(SearchCustomer.class.getName()).log(Level.SEVERE, null, e);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try {
+            String st=("update points set points=? where CustomerID=? ");
+            pst=My_CNX.getConnection().prepareStatement(st);
+            int id =Integer.parseInt(jTextField1.getText());
+            int point =Integer.parseInt(jTextField3.getText());
+            int pointtoremove =Integer.parseInt(jTextField2.getText());
+            if (point>pointtoremove){
+            int removed=point-pointtoremove;
+            pst.setInt(1, removed);
+            pst.setInt(2, id);
+            pst.executeUpdate();
+            jTextField1.setText(" ");
+            jTextField2.setText(" ");
+            jTextField3.setText(" ");
+            
+            }
+            else {
+                   JOptionPane.showMessageDialog(null, "No Enough points to remove","Error",2);
+
+                
+            }
+        } catch (SQLException e) {
+            Logger.getLogger(SearchCustomer.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
