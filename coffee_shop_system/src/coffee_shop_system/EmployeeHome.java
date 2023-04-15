@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package coffee_shop_system;
+import java.awt.print.PrinterException;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -57,10 +58,12 @@ public class EmployeeHome extends javax.swing.JFrame {
             jCheckBox4.setSelected(false);
             jCheckBox5.setSelected(false);
             jCheckBox6.setSelected(false);
-            jTextField1.setText("14.0");
+            jTextField1.setText("0.0");
             jTextField2.setText("0.0");
             jTextField3.setText("0.0");
             jTextArea1.setText(" ");
+              jTextArea1.setText("***************Welcome To Arabica!**********\n"+"CustmerID: "+jTextField4.getText()+"\n"+"Item Name :"+"\t\t"+"Price($)\n");
+             x=0;
           
     }
 
@@ -1233,7 +1236,12 @@ public class EmployeeHome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_RecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RecActionPerformed
-        // TODO add your handling code here:
+           try {
+               // TODO add your handling code here:
+               jTextArea1.print();
+           } catch (PrinterException ex) {
+               Logger.getLogger(EmployeeHome.class.getName()).log(Level.SEVERE, null, ex);
+           }
     }//GEN-LAST:event_btn_RecActionPerformed
 
     private void btn_totalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_totalActionPerformed
@@ -1245,6 +1253,7 @@ public class EmployeeHome extends javax.swing.JFrame {
          double Total1 = Double.parseDouble(df.format(Total));
         jTextField2.setText(Double.toString(total));
         jTextField3.setText(Double.toString((Total1)));
+        jTextArea1.setText(jTextArea1.getText()+"\n"+"***************See You Soon!***************");
      
     }//GEN-LAST:event_btn_totalActionPerformed
 
@@ -1448,7 +1457,7 @@ public class EmployeeHome extends javax.swing.JFrame {
          String points=jLabel57.getText();
          int price=Integer.parseInt(jLabel8.getText());
          int subtotal=qty*price;
-         jTextArea1.setText("Welcome To Arabica!!!!\n"+"CustmerID: "+jTextField4.getText()+"\n"+"Item Name :"+"\t\t"+"Price($)\n");
+         jTextArea1.setText("***************Welcome To Arabica!**********\n"+"CustmerID: "+jTextField4.getText()+"\n"+"Item Name :"+"\t\t"+"Price($)\n");
          
      }
     /**
