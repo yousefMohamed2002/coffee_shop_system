@@ -15,6 +15,7 @@ public class Cart extends javax.swing.JFrame {
      */
     public Cart() {
         initComponents();
+        this.setLocationRelativeTo(null);
         
         
         this.setLocationRelativeTo(null);
@@ -123,6 +124,11 @@ public class Cart extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(255, 0, 51));
         jButton3.setText("vodafone");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(102, 255, 0));
         jButton4.setText("Fawery");
@@ -225,14 +231,20 @@ public class Cart extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        Telda t1=new Telda();
+        t1.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        Fawery f1=new Fawery();
+        f1.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        Cash c1=new Cash(); 
+        c1.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -240,6 +252,12 @@ public class Cart extends javax.swing.JFrame {
         Card c1=new Card();
         c1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Vodafone v1= new Vodafone();
+        v1.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

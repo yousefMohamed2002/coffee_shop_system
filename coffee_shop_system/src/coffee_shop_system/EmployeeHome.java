@@ -23,7 +23,7 @@ public class EmployeeHome extends javax.swing.JFrame {
      */
     private double total=0.0;
      private int x=0; 
-     public  int points=0;
+     public static int points=0;
       int id;
 
     public EmployeeHome() {
@@ -250,7 +250,7 @@ public class EmployeeHome extends javax.swing.JFrame {
 
         jLabel52.setText("Points");
 
-        jLabel57.setText("100");
+        jLabel57.setText("200");
 
         jCheckBox1.setText("jCheckBox1");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -373,7 +373,7 @@ public class EmployeeHome extends javax.swing.JFrame {
 
         jLabel58.setText("Points");
 
-        jLabel59.setText("100");
+        jLabel59.setText("200");
 
         jCheckBox2.setText("jCheckBox2");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -490,7 +490,7 @@ public class EmployeeHome extends javax.swing.JFrame {
 
         jLabel60.setText("Points");
 
-        jLabel61.setText("100");
+        jLabel61.setText("200");
 
         jCheckBox3.setText("jCheckBox3");
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -602,7 +602,7 @@ public class EmployeeHome extends javax.swing.JFrame {
 
         jLabel66.setText("Points :");
 
-        jLabel67.setText("100");
+        jLabel67.setText("200");
 
         jCheckBox6.setText("jCheckBox6");
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
@@ -714,7 +714,7 @@ public class EmployeeHome extends javax.swing.JFrame {
 
         jLabel64.setText("Points :");
 
-        jLabel65.setText("100");
+        jLabel65.setText("200");
 
         jCheckBox5.setText("jCheckBox5");
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
@@ -832,7 +832,7 @@ public class EmployeeHome extends javax.swing.JFrame {
 
         jLabel62.setText("Points :");
 
-        jLabel63.setText("100");
+        jLabel63.setText("200");
 
         jCheckBox4.setText("jCheckBox4");
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
@@ -1311,7 +1311,7 @@ public class EmployeeHome extends javax.swing.JFrame {
             double price=qty*3;
            jTextArea1.setText(jTextArea1.getText()+x+". "+jSpinner1.getValue()+" x "+jLabel7.getText()+"\t\t"+price+"\n");
            total+=price;
-           points+=100*qty;
+           points=points+100;
            
             
 
@@ -1335,7 +1335,7 @@ public class EmployeeHome extends javax.swing.JFrame {
             double price=qty*5;
             jTextArea1.setText(jTextArea1.getText()+x+". "+jSpinner2.getValue()+" x "+jLabel17.getText()+"\t\t"+price+"\n");
             total+=price;
-            points+=100*qty;
+            points+=100;
 
         }
         else 
@@ -1357,7 +1357,7 @@ public class EmployeeHome extends javax.swing.JFrame {
             double price=qty*3;
             jTextArea1.setText(jTextArea1.getText()+x+". "+jSpinner3.getValue()+" x "+jLabel22.getText()+"\t"+price+"\n");
             total +=price;
-            points+=100*qty;
+            points+=(100);
 
         }
         else 
@@ -1378,7 +1378,7 @@ public class EmployeeHome extends javax.swing.JFrame {
             double price=qty*5;
             jTextArea1.setText(jTextArea1.getText()+x+". "+jSpinner6.getValue()+" x "+jLabel44.getText()+"\t\t"+price+"\n");
             total+=price;
-            points+=100*qty;
+            points+=(100);
 
             
         }
@@ -1402,7 +1402,7 @@ public class EmployeeHome extends javax.swing.JFrame {
             double price=qty*5;
             jTextArea1.setText(jTextArea1.getText()+x+". "+jSpinner5.getValue()+" x "+jLabel39.getText()+"\t\t"+price+"\n");
             total+=price;
-            points+=100*qty;
+            points+=(100);
 
         }
         else 
@@ -1421,10 +1421,10 @@ public class EmployeeHome extends javax.swing.JFrame {
             {
                 Coffee();
             }
-            double price=qty*3;
+            double price=(qty*3);
             jTextArea1.setText(jTextArea1.getText()+x+". "+jSpinner4.getValue()+" x "+jLabel29.getText()+"\t\t"+price+"\n");
             total+=price;
-            points+=100*qty;
+            points+=(100);
 
         }
         else 
