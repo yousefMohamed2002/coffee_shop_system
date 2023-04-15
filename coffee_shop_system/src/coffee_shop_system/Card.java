@@ -213,7 +213,7 @@ Connection con;
        String dec=c1.jTextArea1.getText();
        String methode="card";
        String code=(jTextField1.getText());
-        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID) VALUES (?,?,?,?,?,?,?); ");
+        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID,total) VALUES (?,?,?,?,?,?,?,?); ");
         try {
             pst=My_CNX.getConnection().prepareStatement(st);
             pst.setInt(1, id);
@@ -223,6 +223,7 @@ Connection con;
             pst.setString(5, code);
             pst.setInt(6,0 );
             pst.setInt(7, ide);
+            pst.setString(8,Double.toString(EmployeeHome.total));
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Orderd placed","updated",2);
             x++;

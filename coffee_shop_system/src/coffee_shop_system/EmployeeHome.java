@@ -21,7 +21,7 @@ public class EmployeeHome extends javax.swing.JFrame {
     /**
      * Creates new form EmployeeHome
      */
-    private double total=0.0;
+       public static double total=0.0;
      private int x=0; 
      public static int points=0;
       int id;
@@ -1239,7 +1239,7 @@ public class EmployeeHome extends javax.swing.JFrame {
     private void btn_totalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_totalActionPerformed
         // TODO add your handling code here:
         
-        jTextField1.setText(Double.toString(total*0.14));
+        jTextField1.setText(Double.toString(Math.round((total*0.14))));
         double Total=total+(total*0.14);
         DecimalFormat df = new DecimalFormat("#.##");
          double Total1 = Double.parseDouble(df.format(Total));
@@ -1597,7 +1597,7 @@ public class EmployeeHome extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     public javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

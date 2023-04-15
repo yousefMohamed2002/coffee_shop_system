@@ -270,7 +270,7 @@ public class Vodafone extends javax.swing.JFrame {
        String methode="Vodafone";
        int x=c1.getX();
        String code=(jTextField2.getText());
-        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID) VALUES (?,?,?,?,?,?,?); ");
+        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID,total) VALUES (?,?,?,?,?,?,?,?); ");
         try {
             pst=My_CNX.getConnection().prepareStatement(st);
             pst.setInt(1, id);
@@ -280,6 +280,7 @@ public class Vodafone extends javax.swing.JFrame {
             pst.setString(5, code);
             pst.setInt(6,Integer.parseInt(jTextField4.getText()));
             pst.setInt(7, ide);
+           pst.setString(8,Double.toString(EmployeeHome.total));
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Orderd placed","updated",2);
             x++;

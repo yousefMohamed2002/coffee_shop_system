@@ -293,7 +293,7 @@ public class Telda extends javax.swing.JFrame {
        String methode="Telda";
        String code=(jTextField2.getText());
        int x=c1.getX();
-        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID) VALUES (?,?,?,?,?,?,?); ");
+        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID,total) VALUES (?,?,?,?,?,?,?,?); ");
         try {
             pst=My_CNX.getConnection().prepareStatement(st);
             
@@ -304,6 +304,7 @@ public class Telda extends javax.swing.JFrame {
             pst.setString(5, code);
             pst.setInt(6,Integer.parseInt(jTextField3.getText()) );
             pst.setInt(7, ide);
+            pst.setString(8,Double.toString(EmployeeHome.total));;
             pst.executeUpdate();
             x++;
             JOptionPane.showMessageDialog(null, "Orderd placed","updated",2);

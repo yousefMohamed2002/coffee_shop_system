@@ -226,7 +226,7 @@ public class Fawery extends javax.swing.JFrame {
         String methode="card";
         String code=(jTextField1.getText());
         int x=c1.getX();
-        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID) VALUES (?,?,?,?,?,?,?); ");
+        String st=(" INSERT into cus_order(CustomerID,OrderID,OrderDesc,paymentmethode,paymentUniqeCODE,phoneNumber,EmployeeID,total) VALUES (?,?,?,?,?,?,?,?); ");
         try {
             pst=My_CNX.getConnection().prepareStatement(st);
             pst.setInt(1, id);
@@ -236,6 +236,7 @@ public class Fawery extends javax.swing.JFrame {
             pst.setString(5, code);
             pst.setInt(6,0 );
             pst.setInt(7, ide);
+            pst.setString(8,Double.toString(EmployeeHome.total));
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Orderd placed","updated",2);
             x++;
